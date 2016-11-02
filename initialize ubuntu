@@ -1,0 +1,49 @@
+#!/bin/sh
+
+sudo apt-get update
+sudo apt-get upgrade
+
+#fix time in dual boot
+timedatectl set-local-rtc 1
+
+#git
+sudo apt-get install git
+
+#tweak tool
+sudo apt-get install unity-tweak-tool
+
+#themes and icons
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt-get update
+sudo apt-get install macbuntu-os-icons-lts-v7
+sudo apt-get install macbuntu-os-ithemes-lts-v7
+
+#aliases
+vi ~/.bash_aliases
+source ~/.bash_aliases
+
+#sublime text
+sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+
+#dash alternative
+sudo add-apt-repository ppa:noobslab/macbuntu
+sudo apt-get update
+sudo apt-get install albert
+
+#IRC
+sudo add-apt-repository ppa:gwendal-lebihan-dev/hexchat-stable
+sudo apt-get update
+sudo apt-get install hexchat
+
+#preload
+sudo apt-get install preload
+
+#reduce overheating
+sudo add-apt-repository ppa:linrunner/tlp
+sudo apt-get update
+sudo apt-get install tlp tlp-rdw
+sudo tlp start
+
+
